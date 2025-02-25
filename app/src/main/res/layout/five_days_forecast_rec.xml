@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="fivedaysforecast"
+            type="com.example.weatherapp.responseModel.AverageForecast" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.cardview.widget.CardView
+    android:id="@+id/fivedaysforecastcardview"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    app:cardCornerRadius="20dp"
+    android:backgroundTint="#EBDEFF"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fivedaysforecastconstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/namesofdays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="@{fivedaysforecast.date}"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+
+            app:layout_constraintLeft_toLeftOf="@id/fivedaysforecastconstraint"
+            app:layout_constraintTop_toTopOf="@id/fivedaysforecastconstraint">
+
+        </TextView>
+        <TextView
+            android:id="@+id/weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="@id/namesofdays"
+            app:layout_constraintTop_toBottomOf="@id/namesofdays"
+            android:layout_marginTop="10dp">
+
+        </TextView>
+        <TextView
+            android:id="@+id/maxtemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:text="@{String.valueOf(fivedaysforecast.averagemaxtemps) }"
+            android:layout_marginRight="-10dp"
+            android:layout_marginTop="2dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintRight_toLeftOf="@id/lineicon"
+            app:layout_constraintTop_toTopOf="@id/namesofdays"
+            >
+
+        </TextView>
+        <TextView
+            android:id="@+id/mintemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:text="@{String.valueOf(fivedaysforecast.averagemintemps)}"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/maxtemp"
+            app:layout_constraintRight_toRightOf="@id/maxtemp"
+            app:layout_constraintLeft_toLeftOf="@id/maxtemp"
+            app:layout_constraintBottom_toBottomOf="@id/weather"
+
+            >
+
+        </TextView>
+       <ImageView
+           android:id="@+id/lineicon"
+           android:layout_width="50dp"
+           android:layout_height="170dp"
+           android:src="@drawable/line"
+           android:layout_marginRight="-10dp"
+           app:layout_constraintRight_toLeftOf="@id/weathericon"
+           app:layout_constraintTop_toTopOf="@id/fivedaysforecastconstraint"
+           app:layout_constraintBottom_toBottomOf="@id/fivedaysforecastconstraint"
+           >
+
+       </ImageView>
+        <ImageView
+            android:id="@+id/weathericon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            loadurl="@{fivedaysforecast.iconurl}"
+            android:layout_marginRight="10dp"
+            app:layout_constraintRight_toRightOf="@id/fivedaysforecastconstraint"
+            app:layout_constraintTop_toTopOf="@id/fivedaysforecastconstraint"
+            app:layout_constraintBottom_toBottomOf="@id/fivedaysforecastconstraint">
+
+        </ImageView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="hourlyforecast"
+            type="com.example.weatherapp.responseModel.Item0" />
+    </data>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/hoursofdaytextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="@{hourlyforecast.time}"
+        app:layout_constraintBottom_toTopOf="@id/iconaccordingtohoursofday"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/iconaccordingtohoursofday"
+        app:layout_constraintRight_toRightOf="@id/iconaccordingtohoursofday"
+        >
+
+    </TextView>
+    <ImageView
+        android:id="@+id/iconaccordingtohoursofday"
+        android:layout_width="80dp"
+        android:layout_height="90dp"
+        loadurl="@{hourlyforecast.weather[0].iconurl}"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hoursofdaytextview"
+        android:scaleType="fitXY"
+        >
+
+    </ImageView>
+<TextView
+    android:id="@+id/degreeaccordingtohours"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="18sp"
+    android:textColor="@color/black"
+android:text="@{hourlyforecast.main.roundedtemp}"
+    android:layout_marginTop="-12dp"
+    app:layout_constraintLeft_toLeftOf="@id/iconaccordingtohoursofday"
+    app:layout_constraintRight_toRightOf="@id/iconaccordingtohoursofday"
+    app:layout_constraintTop_toBottomOf="@id/iconaccordingtohoursofday"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginBottom="10dp"
+    >
+
+</TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

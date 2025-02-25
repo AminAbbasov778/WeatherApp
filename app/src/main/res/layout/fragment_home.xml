@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6EDFF"
+    tools:context=".HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainweathercardview"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainweatherconstrait"
+            android:layout_width="match_parent"
+            android:layout_height="450dp">
+
+
+            <ImageView
+                android:id="@+id/mainweatherbackgroundimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/weather"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@id/mainweatherconstrait"
+                app:layout_constraintRight_toRightOf="@id/mainweatherconstrait"
+                app:layout_constraintTop_toTopOf="@id/mainweatherconstrait" />
+
+            <TextView
+                android:id="@+id/placeid"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="63dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@id/mainweatherconstrait"
+                app:layout_constraintTop_toTopOf="@id/mainweatherconstrait">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/searchicon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+               android:layout_marginRight="10dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/baseline_search_24"
+                app:layout_constraintRight_toRightOf="@id/mainweatherconstrait"
+                app:layout_constraintTop_toTopOf="@id/mainweatherconstrait">
+
+            </ImageView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/citynameedittextcardview"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_marginTop="60dp"
+                app:layout_constraintLeft_toLeftOf="@id/mainweatherconstrait"
+                app:layout_constraintRight_toRightOf="@id/mainweatherconstrait"
+                app:layout_constraintTop_toTopOf="@id/mainweatherconstrait">
+
+
+            <EditText
+                android:id="@+id/citynameedittext"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:textColorHint="@color/black"
+                android:hint="City name"
+                android:paddingLeft="20dp"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:background="#00000000"
+                android:cursorVisible="true"
+                >
+
+            </EditText>
+            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/actbackicon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toLeftOf="@id/mainweatherconstrait"
+                app:layout_constraintRight_toLeftOf="@id/citynameedittextcardview"
+                app:layout_constraintTop_toTopOf="@id/citynameedittextcardview"
+                app:layout_constraintBottom_toBottomOf="@id/citynameedittextcardview"
+                android:src="@drawable/baseline_arrow_back_24">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/mainweatherdegree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="81dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                android:textSize="150sp"
+                app:layout_constraintLeft_toLeftOf="@id/mainweatherconstrait"
+                app:layout_constraintTop_toBottomOf="@id/placeid">
+
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/feelslike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginBottom="30dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/mainweatherdegree"
+                app:layout_constraintLeft_toRightOf="@id/mainweatherdegree"
+
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/dateid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/mainweatherconstrait"
+                app:layout_constraintLeft_toLeftOf="@id/mainweatherdegree"
+               >
+            </TextView>
+
+            <TextView
+                android:id="@+id/tempmax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/tempmin"
+                app:layout_constraintRight_toRightOf="@id/mainweatherconstrait">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tempmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/dateid"
+                app:layout_constraintRight_toRightOf="@id/mainweatherconstrait">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/mainweatherimage"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+               app:layout_constraintRight_toRightOf="@id/mainweatherconstrait"
+                app:layout_constraintBottom_toBottomOf="@id/mainweatherdegree"
+               android:layout_marginRight="70dp"
+                android:layout_marginBottom="90dp"
+               />
+            <TextView
+                android:id="@+id/mainweathertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="@id/mainweatherimage"
+                app:layout_constraintTop_toBottomOf="@id/mainweatherimage"
+                app:layout_constraintRight_toRightOf="@id/mainweatherimage"
+                android:layout_marginTop="-30dp"
+                >
+
+            </TextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/todaybuttoncardview"
+        android:layout_width="115dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainweathercardview"
+        app:layout_constraintRight_toLeftOf="@id/tomorrowbuttoncardview"
+        app:cardCornerRadius="15dp"
+        >
+
+
+    <Button
+        android:id="@+id/todaybutton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Today"
+        android:textColor="@color/black"
+        android:background="#00000000"
+        >
+
+    </Button>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tomorrowbuttoncardview"
+        android:layout_width="115dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toRightOf="@id/todaybuttoncardview"
+        app:layout_constraintTop_toTopOf="@id/todaybuttoncardview"
+        app:layout_constraintRight_toLeftOf="@id/fivedaysbuttoncardview"
+        app:cardCornerRadius="15dp"
+        >
+
+
+        <Button
+            android:id="@+id/tomorrowbutton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Tomorrow"
+            android:textColor="@color/black"
+            android:background="#00000000"
+            >
+
+        </Button>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fivedaysbuttoncardview"
+        android:layout_width="115dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tomorrowbuttoncardview"
+        app:layout_constraintTop_toTopOf="@id/tomorrowbuttoncardview"
+        app:cardCornerRadius="15dp"
+        >
+
+
+        <Button
+            android:id="@+id/fivedaysbutton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="5 days"
+            android:textColor="@color/black"
+            android:background="#00000000"
+            >
+
+        </Button>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/weatherrec"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="@id/todaybuttoncardview"
+        app:layout_constraintTop_toBottomOf="@id/tomorrowbuttoncardview"
+        app:layout_constraintRight_toRightOf="@id/fivedaysbuttoncardview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="20dp"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fivedaysforecastrec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="@id/todaybuttoncardview"
+        app:layout_constraintTop_toBottomOf="@id/tomorrowbuttoncardview"
+        app:layout_constraintRight_toRightOf="@id/fivedaysbuttoncardview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="20dp"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
