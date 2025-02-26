@@ -5,14 +5,14 @@ WeatherApp is an Android application that provides real-time weather information
 ## 📸 Screenshots  
 
 <p align="center">
-  <img src="https://github.com/AminAbbasov778/WeatherApp/blob/master/todaybutton.png" width="200" style="gap: 10px;" />
-  <img src="https://github.com/AminAbbasov778/weatherapp/raw/main/images/tomorrow.png" width="200" style="gap-right: 10px;" />
-  <img src="https://github.com/AminAbbasov778/weatherapp/raw/main/images/fivedays.png" width="200" />
+  <img src="https://github.com/AminAbbasov778/WeatherApp/raw/master/todaybutton.png" width="200" style="gap: 10px;" />
+  <img src="https://github.com/AminAbbasov778/WeatherApp/raw/master/tomorrowbutton.png" width="200" style="gap-right: 10px;" />
+  <img src="https://github.com/AminAbbasov778/WeatherApp/raw/master/fivedaysbutton.png" width="200" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/AminAbbasov778/weatherapp/raw/main/images/search.png" width="200" style="margin-right: 10px;" />
-  <img src="https://github.com/AminAbbasov778/weatherapp/raw/main/images/anothercity.png" width="200" />
+  <img src="https://github.com/AminAbbasov778/WeatherApp/raw/master/citynameedittext.png" width="200" style="margin-right: 10px;" />
+  <img src="https://github.com/AminAbbasov778/WeatherApp/raw/master/newcityedittext.png" width="200" />
 </p>
 
 ## 🚀 Features  
