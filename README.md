@@ -5,8 +5,8 @@ WeatherApp is an Android application that provides real-time weather information
 ## 📸 Screenshots  
 
 <p align="center">
-  <img src="https://github.com/AminAbbasov778/weatherapp/raw/main/images/today.png" width="200" style="margin-right: 10px;" />
-  <img src="https://github.com/AminAbbasov778/weatherapp/raw/main/images/tomorrow.png" width="200" style="margin-right: 10px;" />
+  <img src="https://github.com/AminAbbasov778/weatherapp/raw/main/images/today.png" width="200" style="gap: 10px;" />
+  <img src="https://github.com/AminAbbasov778/weatherapp/raw/main/images/tomorrow.png" width="200" style="gap-right: 10px;" />
   <img src="https://github.com/AminAbbasov778/weatherapp/raw/main/images/fivedays.png" width="200" />
 </p>
 
