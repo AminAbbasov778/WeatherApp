@@ -6,13 +6,9 @@
 
 ## 📸 Screenshots
 
-| Start Page | Today | Tomorrow | 5 Days |
-|------------|--------|----------|--------|
-| <img src="screenshots/start.png" width="200" height="400" /> | <img src="screenshots/today.png" width="200" height="400" /> | <img src="screenshots/tomorrow.png" width="200" height="400" /> | <img src="screenshots/5days.png" width="200" height="400" /> |
-
-| Change City |
-|-------------|
-| <img src="screenshots/change_city.png" width="200" height="400" /> |
+| Today| Tomorrow | 5 Days | Change City |
+|--------|--------|----------|------------|
+| <img src="screenshotrs/Screenshot_20250317-201646.png" width="200" height="400" /> | <img src="screenshotrs/Screenshot_20250317-203716.png" width="200" height="400" /> | <img src="screenshotrs/Screenshot_20250317-204140.png" width="200" height="400" /> | <img src="screenshotrs/Screenshot_20250317-204215.png" width="200" height="400" /> |
 
 ---
 
