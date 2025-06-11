@@ -47,7 +47,6 @@
   - Tomorrow
   - Next 5 days
 - 🌈 Responsive and modern UI
-- 🚫 No local database (Room is not used)
 
 ---
 
